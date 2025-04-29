@@ -1,0 +1,51 @@
+{
+    "677c422275228": {
+        "username": "asd",
+        "email": "ferencjarmezei@gmail.com",
+        "password": "$2y$10$yenlJKbzeTQKGviHOubL2eH1XiBQ8LVTJDxxdGNF4cfmz..UNlbV6",
+        "isAdmin": false,
+        "id": "677c422275228"
+    },
+    "677c435958743": {
+        "username": "teszt2",
+        "email": "kisbela@gmail.com",
+        "password": "$2y$10$VQTwzCbPFBDmb0MTldgQ1.Z.pzFdnYkyEPvKuZFGP9WLuHFzYXn2y",
+        "isAdmin": false,
+        "id": "677c435958743"
+    },
+    "677c4484308a5": {
+        "username": "ferike",
+        "email": "ferenc@gmail.com",
+        "password": "$2y$10$8WnjlH9RNZ.7tqVrWKrrY.yhedDTAIugOBwC29AfiFGHETv8g.pvC",
+        "isAdmin": false,
+        "id": "677c4484308a5"
+    },
+    "677fd25a41748": {
+        "username": "Ferenc123",
+        "email": "ferencasd@gmail.com",
+        "password": "$2y$10$2gMr7RnFu8l8rCEbpKjh2ep93Q8U6kU5ijMqh6iDTtsrhAFyiDAzy",
+        "isAdmin": false,
+        "id": "677fd25a41748"
+    },
+    "677fe31e70a7e": {
+        "username": "Admin",
+        "email": "admin@gmail.com",
+        "password": "$2y$10$Eu.AGmWgDL8MW85b5u1ytucM0k9s2h7scKQBSUTlm\/Jnk3d\/fzwge",
+        "isAdmin": true,
+        "id": "677fe31e70a7e"
+    },
+    "67857e31a6ce4": {
+        "username": "admin",
+        "email": "asda@gmail.com",
+        "password": "$2y$10$SAEIVbQiy9MCWFAxf6qvvOsP3UEH1UFeTW5y9MAvbamvFtKWnF4MK",
+        "isAdmin": false,
+        "id": "67857e31a6ce4"
+    },
+    "67857e3e0d77f": {
+        "username": "admin",
+        "email": "faef@afeafaef.com",
+        "password": "$2y$10$xc7rfSI8fM964u0wECRRZuBETqxGcLV.lsA7oQE10cQYJ58BjXguu",
+        "isAdmin": false,
+        "id": "67857e3e0d77f"
+    }
+}

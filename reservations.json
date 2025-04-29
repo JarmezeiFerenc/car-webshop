@@ -1,0 +1,79 @@
+{
+    "67858294e2f75": {
+        "id": "67858294e2f75",
+        "from_date": "2025-01-01",
+        "to_date": "2025-01-03",
+        "user_email": "admin@gmail.com",
+        "car_id": "3"
+    },
+    "67858328c4964": {
+        "id": "67858328c4964",
+        "from_date": "2025-01-07",
+        "to_date": "2025-01-08",
+        "user_email": "ferencasd@gmail.com",
+        "car_id": "3"
+    },
+    "678583a6f2662": {
+        "id": "678583a6f2662",
+        "from_date": "2025-01-21",
+        "to_date": "2025-01-22",
+        "user_email": "ferencasd@gmail.com",
+        "car_id": "3"
+    },
+    "67858417cf364": {
+        "id": "67858417cf364",
+        "from_date": "2025-01-28",
+        "to_date": "2025-01-30",
+        "user_email": "ferencasd@gmail.com",
+        "car_id": "3"
+    },
+    "678587471c24e": {
+        "id": "678587471c24e",
+        "from_date": "2025-01-31",
+        "to_date": "2025-02-01",
+        "user_email": "ferencasd@gmail.com",
+        "car_id": "3"
+    },
+    "67858b9eebfb2": {
+        "id": "67858b9eebfb2",
+        "from_date": "2025-01-01",
+        "to_date": "2025-01-22",
+        "user_email": "ferencasd@gmail.com",
+        "car_id": "4"
+    },
+    "67858d1d6b934": {
+        "id": "67858d1d6b934",
+        "from_date": "2025-01-29",
+        "to_date": "2025-01-30",
+        "user_email": "ferencasd@gmail.com",
+        "car_id": "4"
+    },
+    "67858d697f72b": {
+        "id": "67858d697f72b",
+        "from_date": "2025-02-27",
+        "to_date": "2025-02-28",
+        "user_email": "ferencasd@gmail.com",
+        "car_id": "4"
+    },
+    "6785915c3df22": {
+        "id": "6785915c3df22",
+        "from_date": "2025-01-09",
+        "to_date": "2025-01-16",
+        "user_email": "admin@gmail.com",
+        "car_id": "2"
+    },
+    "67859217ba54e": {
+        "id": "67859217ba54e",
+        "from_date": "2025-03-06",
+        "to_date": "2025-03-14",
+        "user_email": "admin@gmail.com",
+        "car_id": "2"
+    },
+    "678592b4e30f6": {
+        "id": "678592b4e30f6",
+        "from_date": "2024-12-02",
+        "to_date": "2024-12-04",
+        "user_email": "admin@gmail.com",
+        "car_id": "2"
+    }
+}
