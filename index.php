@@ -113,7 +113,7 @@
             <?php foreach ($filtered_cars as $car): ?>
             <div class="col-md-3">
                 <div class="card">
-                    <img src="<?= $car['image'] ?>" alt="<?= $car['brand'] . ' ' . $car['model'] ?>" />
+                    <img src="<?= htmlspecialchars($car['image']) ?>" alt="<?= htmlspecialchars($car['brand'] . ' ' . $car['model']) ?>" />
                     <?php if (isset($_SESSION['user']) && $_SESSION['user']['isAdmin']): ?>
                         <div class="d-flex justify-content-between mb-2">
                         <form action="deletecar.php" method="POST" onsubmit="return confirm('Biztosan törölni szeretnéd ezt az autót?');">
@@ -126,10 +126,10 @@
                         </form>
                         </div>
                     <?php endif; ?>
-                    <h5><?= $car['brand'] ?> <?= $car['model'] ?></h5>
-                    <p><?= $car['passengers'] ?> férőhely - <?= $car['transmission'] ?></p>
+                    <h5><?= htmlspecialchars($car['brand']) ?> <?= htmlspecialchars($car['model']) ?></h5>
+                    <p><?= htmlspecialchars($car['passengers']) ?> férőhely - <?= htmlspecialchars($car['transmission']) ?></p>
                     <div class="card-footer">
-                        <span>Ár: <?= $car['daily_price_huf'] ?> Ft/nap</span>
+                        <span>Ár: <?= htmlspecialchars($car['daily_price_huf']) ?> Ft/nap</span>
                         <a href="auto.php?name=<?= $car['brand'] ?> <?= $car['model'] ?>&img=<?= $car['image'] ?>&id=<?= $car['id'] ?>&passengers=<?= $car['passengers'] ?>&transmission=<?= $car['transmission'] ?>&fuel=<?= $car['fuel_type'] ?>&year=<?= $car['year'] ?>&price=<?= $car['daily_price_huf'] ?>"><button>Foglalás</button></a>
                     </div>
                 </div>

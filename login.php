@@ -18,14 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'isAdmin' => $user['isAdmin']
         ];
 
-        echo "Sikeres bejelentkezés! Üdvözlünk, " . htmlspecialchars($user['username']) . "!";
-        if ($user['isAdmin']) {
-            echo " (Admin)";
-        }
-
         header("Location: index.php");
+        exit;
     } else {
-        echo $user; 
+        $error = $user; 
     }
 }
 
@@ -41,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body id="login">
     <h1>Bejelentkezés</h1>
+    <?php if (isset($error)) echo "<p>" . htmlspecialchars($error) . "</p>"; ?>
         <form method="POST">
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" required>

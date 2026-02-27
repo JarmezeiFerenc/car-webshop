@@ -7,6 +7,7 @@ abstract class FileIO implements IFileIO {
   protected $filepath;
 
   public function __construct($filename) {
+    $filename = __DIR__ . DIRECTORY_SEPARATOR . $filename;
     if (!is_readable($filename) || !is_writable($filename)) {
       throw new Exception("Data source $filename is invalid.");
     }

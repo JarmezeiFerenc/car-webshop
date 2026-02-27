@@ -47,18 +47,18 @@ if (!isset($_SESSION['user'])) {
     <main>
         <div id="auto">
             <div>
-                <img src="<?= $img ?>" alt="<?= $name ?>">
+                <img src="<?= htmlspecialchars($img) ?>" alt="<?= htmlspecialchars($name) ?>">
             </div>
             <div id="auto-text">
-                <h1><?php echo($name) ?></h1>
+                <h1><?= htmlspecialchars($name) ?></h1>
                 <ul>
-                    <li>Üzemanyag: <?= $fuel ?></li>
-                    <li>Váltó: <?= $transmission ?></li>
-                    <li>Gyártási év: <?= $year ?></li>
-                    <li>Férőhelyek száma: <?= $passengers ?></li>
+                    <li>Üzemanyag: <?= htmlspecialchars($fuel) ?></li>
+                    <li>Váltó: <?= htmlspecialchars($transmission) ?></li>
+                    <li>Gyártási év: <?= htmlspecialchars($year) ?></li>
+                    <li>Férőhelyek száma: <?= htmlspecialchars($passengers) ?></li>
                 </ul>
                 <div>
-                    <span><?= $price ?> Ft</span><span>/nap</span>
+                    <span><?= htmlspecialchars($price) ?> Ft</span><span>/nap</span>
                 </div>
                 <div>
                 <form method="get" action="reservecar.php">

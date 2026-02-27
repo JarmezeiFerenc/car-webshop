@@ -46,6 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && $car_id && $from_date && $to_date) {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,3 +94,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && $car_id && $from_date && $to_date) {
     <?php endif; ?>
     </main>
 </body>
+</html>

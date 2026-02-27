@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body id="reg">
     <h1>Regisztráció</h1>
-    <?php if (isset($message)) echo "<p>$message</p>"; ?>
+    <?php if (isset($message)) echo "<p>" . htmlspecialchars($message) . "</p>"; ?>
     <form method="POST">
         <label for="username">Felhasználónév:</label>
         <input type="text" id="username" name="username" required>

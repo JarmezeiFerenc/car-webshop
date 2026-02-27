@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['user']) || !$_SESSION['user']['is_admin']) {
+if (!isset($_SESSION['user']) || !$_SESSION['user']['isAdmin']) {
     die("Nincs admin jogosultság.");
 }
 require_once 'storage.php';
