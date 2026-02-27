@@ -1,7 +1,8 @@
 <?php
 session_start();
 if (!isset($_SESSION['user']) || !$_SESSION['user']['isAdmin']) {
-    die("Nincs admin jogosultság.");
+    header("Location: index.php");
+    exit;
 }
 require_once 'storage.php';
 
@@ -27,11 +28,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ];
 
     $storage = new Storage(new JsonIO('cars.json'));
+    $storage->add($newCar);
 
-    $id = $storage->add($newCar);
-
-    echo "Az autó sikeresen hozzáadva! Az új autó azonosítója: $id";
+    header("Location: index.php");
+    exit;
 } else {
-    echo "Hibás kérés!";
+    header("Location: newcar.php");
+    exit;
 }
 ?>

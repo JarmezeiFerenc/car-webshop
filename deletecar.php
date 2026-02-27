@@ -13,7 +13,7 @@ if (!isset($_POST['car_id'])) {
 $carStorage = new Storage(new JsonIO('cars.json'));
 
 $car_id = $_POST['car_id'];
-$carStorage->delete($car_id -1);
+$carStorage->delete($car_id);
 
 header("Location: index.php");
 exit;

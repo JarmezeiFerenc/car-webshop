@@ -3,7 +3,8 @@ session_start();
 require_once 'storage.php';
 
 if (!isset($_SESSION['user'])) {
-    die('Előbb jelentkezz be!');
+    header("Location: login.php");
+    exit;
 }
 
 $user_email = $_SESSION['user']['email'];
@@ -14,7 +15,7 @@ $cars_storage = new Storage(new JsonIO('cars.json'));
 $reservations = $reservations_storage->findAll();
 
 foreach ($reservations as &$reservation) {
-    $car = $cars_storage->findById($reservation['car_id'] -1);
+    $car = $cars_storage->findById($reservation['car_id']);
     if ($car) {
         $reservation['car_name'] = $car['brand'] . ' ' . $car['model'];
         $reservation['daily_price_huf'] = $car['daily_price_huf'];
@@ -36,7 +37,7 @@ unset($reservation);
 </head>
 <body>
 <header>
-        <h1>iKarRental</h1>
+        <h1><a href="index.php">iKarRental</a></h1>
         <nav>
         <?php if (isset($_SESSION['user'])): ?>
             <?php if (isset($_SESSION['user']) && $_SESSION['user']['isAdmin']): ?>

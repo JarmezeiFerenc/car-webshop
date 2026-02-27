@@ -53,7 +53,7 @@
 </head>
 <body>
     <header>
-        <h1>iKarRental</h1>
+        <h1><a href="index.php">iKarRental</a></h1>
         <nav>
         <?php if (isset($_SESSION['user'])): ?>
             <?php if (isset($_SESSION['user']) && $_SESSION['user']['isAdmin']): ?>
@@ -78,32 +78,32 @@
         <div class="filter-item">
             <label for="seats">Férőhely</label>
             <div class="seats-control">
-                <input type="number" id="seats" name="seats" value="0" min="0">
+                <input type="number" id="seats" name="seats" value="<?= htmlspecialchars($seats ?? '0') ?>" min="0">
             </div>
         </div>
         <div class="filter-item">
             <label for="date-from">Dátum -tól</label>
-            <input type="date" id="date-from" name="date_from">
+            <input type="date" id="date-from" name="date_from" value="<?= htmlspecialchars($date_from ?? '') ?>">
         </div>
         <div class="filter-item">
             <label for="date-to">Dátum -ig</label>
-            <input type="date" id="date-to" name="date_to">
+            <input type="date" id="date-to" name="date_to" value="<?= htmlspecialchars($date_to ?? '') ?>">
         </div>
         <div class="filter-item">
             <label for="gearbox">Váltó típusa</label>
             <select id="gearbox" name="gearbox">
                 <option value="">Mindegy</option>
-                <option value="manual">Manuális</option>
-                <option value="automatic">Automata</option>
+                <option value="manual" <?= ($gearbox === 'manual') ? 'selected' : '' ?>>Manuális</option>
+                <option value="automatic" <?= ($gearbox === 'automatic') ? 'selected' : '' ?>>Automata</option>
             </select>
         </div>
         <div class="filter-item">
             <label for="price-min">Ár (Ft) - Minimum</label>
-            <input type="number" id="price-min" name="price_min" placeholder="14000" min="0">
+            <input type="number" id="price-min" name="price_min" placeholder="14000" min="0" value="<?= htmlspecialchars($price_min ?? '') ?>">
         </div>
         <div class="filter-item">
             <label for="price-max">Ár (Ft) - Maximum</label>
-            <input type="number" id="price-max" name="price_max" placeholder="21000" min="0">
+            <input type="number" id="price-max" name="price_max" placeholder="21000" min="0" value="<?= htmlspecialchars($price_max ?? '') ?>">
         </div>
         <div class="filter-item">
             <button type="submit" id="filter-button">Szűrés</button>

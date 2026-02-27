@@ -26,7 +26,7 @@ if (!isset($_SESSION['user'])) {
 </head>
 <body>
     <header>
-        <h1>iKarRental</h1>
+        <h1><a href="index.php">iKarRental</a></h1>
         <nav>
         <?php if (isset($_SESSION['user'])): ?>
             <?php if (isset($_SESSION['user']) && $_SESSION['user']['isAdmin']): ?>
@@ -45,6 +45,9 @@ if (!isset($_SESSION['user'])) {
         </nav>
     </header>
     <main>
+        <div style="margin-bottom: 15px;">
+            <a href="index.php" class="back-link">&larr; Vissza a főoldalra</a>
+        </div>
         <div id="auto">
             <div>
                 <img src="<?= htmlspecialchars($img) ?>" alt="<?= htmlspecialchars($name) ?>">

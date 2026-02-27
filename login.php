@@ -3,6 +3,11 @@ require_once 'usermanagement.php';
 
 session_start(); 
 
+if (isset($_SESSION['user'])) {
+    header("Location: index.php");
+    exit;
+}
+
 $userManager = new usermanagement('users.json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -36,16 +41,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Bejelentkezés</title>
 </head>
 <body id="login">
-    <h1>Bejelentkezés</h1>
-    <?php if (isset($error)) echo "<p>" . htmlspecialchars($error) . "</p>"; ?>
+    <div class="auth-container">
+        <h1><a href="index.php" style="color: white; text-decoration: none;">iKarRental</a></h1>
+        <h2>Bejelentkezés</h2>
+        <?php if (isset($error)): ?>
+            <p class="error-msg"><?= htmlspecialchars($error) ?></p>
+        <?php endif; ?>
         <form method="POST">
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" required>
-            <br>
             <label for="password">Jelszó:</label>
             <input type="password" id="password" name="password" required>
-            <br>
             <button type="submit">Bejelentkezés</button>
         </form>
+        <p class="auth-link">Nincs még fiókod? <a href="registration.php">Regisztrálj itt!</a></p>
+        <a href="index.php" class="back-link">&larr; Vissza a főoldalra</a>
+    </div>
 </body>
 </html>

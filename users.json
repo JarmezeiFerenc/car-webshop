@@ -47,5 +47,12 @@
         "password": "$2y$10$xc7rfSI8fM964u0wECRRZuBETqxGcLV.lsA7oQE10cQYJ58BjXguu",
         "isAdmin": false,
         "id": "67857e3e0d77f"
+    },
+    "69a1952251552": {
+        "username": "D\u00e1niel",
+        "email": "daniel@gmail.com",
+        "password": "$2y$10$eBGibcg10KCc44rVPNKciO9Nxt0MSweLsqNOmArXVOkvuQsEsUOHO",
+        "isAdmin": false,
+        "id": "69a1952251552"
     }
 }

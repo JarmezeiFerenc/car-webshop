@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && $car_id && $from_date && $to_date) {
 </head>
 <body>
     <header>
-        <h1>iKarRental</h1>
+        <h1><a href="index.php">iKarRental</a></h1>
         <nav>
             <?php if (isset($_SESSION['user'])): ?>
                 <?php if (isset($_SESSION['user']) && $_SESSION['user']['isAdmin']): ?>
@@ -77,12 +77,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && $car_id && $from_date && $to_date) {
     </header>
     <main>
         <?php if ($message): ?>
-            <div class="alert alert-info" role="alert">
+            <div class="alert <?= isset($isAvailable) && $isAvailable ? 'alert-success' : 'alert-warning' ?>" role="alert">
                 <?= htmlspecialchars($message) ?>
             </div>
         <?php endif; ?>
         <?php if ($_SERVER['REQUEST_METHOD'] === 'GET' && $car_id && $from_date && $to_date && $isAvailable): ?>
-        <div>
+        <div class="reservation-details">
             <h3>Foglalás Részletei:</h3>
             <ul>
                 <li><strong>Autó neve:</strong> <?= htmlspecialchars($car_name) ?></li>
@@ -91,7 +91,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && $car_id && $from_date && $to_date) {
                 <li><strong>Foglalás vége:</strong> <?= htmlspecialchars($to_date) ?></li>
             </ul>
         </div>
-    <?php endif; ?>
+        <?php endif; ?>
+        <div class="action-buttons">
+            <a href="index.php"><button>Vissza a főoldalra</button></a>
+            <a href="profile.php"><button class="btn-secondary">Foglalásaim</button></a>
+        </div>
     </main>
 </body>
 </html>
